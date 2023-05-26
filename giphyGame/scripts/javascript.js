@@ -18,30 +18,28 @@ $(document).ready(function(){
     guessesNum.innerHTML = guessesRemaining;
 
     $(".tagBtn").click(function(){
-        // checks that the player has enough guesses 
-        if (guessesRemaining == 0){
-            alert("You have no more guesses");
-        } else if (this.style.color == "white"){
-            let removeTag = chosenTags.indexOf(this);
+        // checks to see is the selected tag is already selected or not
+        // if already selected will remove from array and change color back to default
+        // updates guesses remaining on the screen to show the user how many guesses they have remaining
+        if (this.style.color == "white"){
+            let removeTag = chosenTags.indexOf(this.innerHTML);
             chosenTags.splice(removeTag, 1);
             this.style.color = "#535252";
             guessesRemaining++;
             guessesNum.innerHTML = guessesRemaining;
+        } else if (guessesRemaining == 0){
+            //checks that the player still has guesses left
+            alert("You have no more guesses");
         } else {
+            // changes color of selected tag to indicate that it is chosen
+            // add tag to an array for future use of the tag
+            // updates the remaining guesses to the user
             guessesRemaining--;
             chosenTags.push(this.innerHTML);
             this.style.color = "white";
             guessesNum.innerHTML = guessesRemaining;
         };
-
-        // if (){
-
-        // } else {
-
-        // }
-
-
-        
+    
     });
 
     ajax.onreadystatechange = function(){
