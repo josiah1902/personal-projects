@@ -48,6 +48,7 @@ body main #playBtn {
   text-decoration: none;
   color: white;
   background-color: #26c526;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 10px 20px;
   border-radius: 8px;
@@ -140,6 +141,7 @@ body main #page-content #results-container p {
   font-size: 25px;
 }
 body main #page-content #results-container .results-buttons {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   gap: 60px;
@@ -151,6 +153,7 @@ body main #page-content #results-container .results-buttons p, body main #page-c
   border-radius: 10px;
   color: white;
   padding: 3px 8px;
+  width: -moz-fit-content;
   width: fit-content;
   display: block;
   background-color: red;
@@ -195,6 +198,7 @@ body main #page-content .content-tags .tags .tag-list {
   flex-direction: column;
   justify-content: center;
   border: 2px solid black;
+  width: -moz-fit-content;
   width: fit-content;
   margin-top: 10px;
 }
@@ -204,6 +208,7 @@ body main #page-content .content-tags .tags .tag-list .tag-line {
   flex-direction: row;
   list-style: none;
   text-align: center;
+  width: -moz-fit-content;
   width: fit-content;
   gap: 50px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

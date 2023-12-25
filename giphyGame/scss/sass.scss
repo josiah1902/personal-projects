@@ -5,7 +5,7 @@
 }
 
 body{
-    overflow: hidden;
+    // overflow: hidden;
     header{
         background-color: rgb(255, 255, 255);
         h1{
@@ -23,10 +23,151 @@ body{
     }
     main{
         padding-top: 20px;
-        height: 100vh;
+        //height: 100%;
         background-color: pink;
+        .howToPlay{
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h2{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 2rem;
+                }
+                p{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.5rem;
+                    padding: 10px;
+                    border: 2px solid black;
+                    border-radius: 8px;
+                    width: 40rem;
+                }
+        }
+        #playBtn{
+                display: block;
+                margin: 50px auto;
+                // margin-top: 70px;
+                font-size: 35px;
+                text-decoration: none;
+                color: white;
+                background-color: #26c526;
+                width: fit-content;
+                padding:  10px 20px;
+                border-radius: 8px;
+                font-family: Arial, Helvetica, sans-serif;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+
+        #overlay-blur{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255,.5);
+            z-index: 1;
+            display: none;
+        }
+        #overlay-confirm{
+            top: 50%;
+            z-index: 2;
+            left: 25%;
+            position: fixed;
+            width: 50%;
+            transform: translateY(-100px);
+            background-color: white;
+            display: none;
+            .overlay-message{
+                display: block;
+                margin: 0 auto;
+                padding-top: 10px;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 30px;
+                font-weight: 700;
+            }
+            #overlay-tags{
+                display: block;
+                margin: 0 auto;
+                margin: 20px;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 25px;
+            }
+            .overlay-buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .overlay-choice{
+                    color: white;
+                    margin: 15px;
+                    font-size: 17px;
+                    padding: 8px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+                #confirm-button{
+                    background-color: rgb(43, 242, 43);
+                }
+                #back-button{
+                    background-color: rgb(245, 36, 36);
+                }
+            }
+        }
+
         #page-content{
             height: 100%;
+            background-color: pink;
+            #results-container{
+                width: 45%;
+                background-color: white;
+                margin: 0 auto;
+                margin-top: 18px;
+                padding: 10px 0;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                #result-action{
+                    margin: 20px 0;
+                }
+                h2{
+                    font-size: 30px;
+                    color: red;
+                }
+
+                p{
+                    font-size: 25px;
+                }
+
+                .results-buttons{
+                    width: fit-content;
+                    display: flex;
+                    gap: 60px;
+                    margin: 0 auto;
+                    p, a{
+                        text-decoration: none;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        color: white;
+                        padding: 3px 8px;
+                        width: fit-content;
+                        display: block;
+                        background-color: red;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                    #retry-continue{
+                        background-color: rgb(0, 255, 0);
+                    }
+                }
+            }
             .content-tags{
                 margin: 0 auto;
                 text-align: center;
@@ -45,7 +186,7 @@ body{
                     display: inline-block;
                     font-size: 30px;
                     color: white;
-                    background-color: rgb(43, 242, 43);
+                    background-color: #2bf22b;
                     padding: 8px;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     margin-top: 20px;
@@ -90,41 +231,7 @@ body{
                 }
 
             }
-            .howToPlay{
-                margin-top: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                h2{
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 2rem;
-                }
-                p{
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 1.5rem;
-                    padding: 10px;
-                    border: 2px solid black;
-                    border-radius: 8px;
-                    width: 40rem;
-                }
-            }
-            #playBtn{
-                display: block;
-                margin: 0 auto;
-                margin-top: 70px;
-                font-size: 35px;
-                text-decoration: none;
-                color: white;
-                background-color: rgb(38, 197, 38);
-                width: fit-content;
-                padding:  10px 20px;
-                border-radius: 8px;
-                font-family: Arial, Helvetica, sans-serif;
-                &:hover{
-                    transform: scale(1.2);
-                }
-            }
+
             .grid-container{
                 display: grid;
                 margin: 0 auto;
@@ -141,7 +248,7 @@ body{
                     grid-area: tags;
                     .tags-container{
                         text-align: center;
-                        .categories{
+                        #categories{
                             font-size: 20px;
                             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         }
@@ -175,7 +282,7 @@ body{
                     grid-area: your-guesses;
                     .guesses-container{
                         text-align: center;
-                        #categories{
+                        #user-categories{
                             font-size: 20px;
                             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         }
@@ -187,7 +294,7 @@ body{
                 }
             }
             .lives{
-                margin: 0 auto;
+                margin: 25px auto;
                 font-size: 30px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
@@ -197,7 +304,6 @@ body{
             }
         }
     }
-
     footer{
         background-color: pink;
     }

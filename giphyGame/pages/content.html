@@ -13,10 +13,21 @@
         <h1>The <img src="../images/giphylogo.png" alt="Giphy logo"> Game</h1>
     </header>
     <main>
+        <div id="overlay-confirm">
+            <span class="overlay-message">Are you sure you want to choose these tags?</span>
+            <span id="overlay-tags">hey</span>
+            <div class="overlay-buttons">
+                <p class="overlay-choice" id="confirm-button">Continue</p>
+                <p class="overlay-choice" id="back-button">Go back</p>
+            </div>
+        </div>
+        <div id="overlay-blur">
+                &nbsp;
+        </div>
         <div id="page-content">
             <div class="content-tags">
                 <h2>Guess which tags the GIF will have!</h2>
-                <span class="guesses-remaining">Guesses Remaining: <span id="guesses-number"></span></span>
+                <span class="guesses-remaining">Guesses Remaining: <span id="guesses-number">3</span></span>
                 <div class="tags">
                     <div class="tag-list">
                         <ul class="tag-line">
@@ -35,48 +46,15 @@
                             <li class="tagBtn">singing</li>
                             <li class="tagBtn">tennis</li>
                         </ul>
-                        <!-- <ul class="tag-line">
-                            <li>Lorem</li>
-                            <li>Lorem</li>
-                            <li>Lorem</li>
-                            <li>Lorem</li>
-                            <li>Lorem</li>
-                            <li>Lorem</li>
-                        </ul> -->
                     </div>
                 </div>
                 <span class="confirmBtn">Confirm Tags</span>
             </div>
-            <!-- <div class="grid-container">
-                <div class="grid-item round">
-                    <h1 id="round">Round <span id="round-number"></span></h1>
-                </div>
-                <div class="grid-item gif">
-                    <div class="gif-holder">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="grid-item your-guesses">
-                    <div class="guesses-container">
-                        <h2>Your Guesses:</h2>
-                        <p class="categories">Cheese, Comedy, Funny</p>
-                    </div>
-                </div>
-                <div class="grid-item tags">
-                    <div class="tags-container">
-                        <h2>GIF's Tags:</h2>
-                        <p class="categories">Cheese, Comedy, Funny</p>
-                    </div>              
-                </div>
-            </div> 
-        </div>
-        <div class="lives">
-            <h3>Lives: <span id="lives-number"></span></h3>
-        </div>-->
+        </div>    
     </main>
     <footer>
-
+        &nbsp;
     </footer>
-    <script src="../scripts/javascript.js"></script>
+    <script src="../scripts/javascript.js" type="module"></script>
 </body>
 </html>

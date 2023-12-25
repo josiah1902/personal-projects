@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sass.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Quiz Functions</title>
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <h2 id="question">Which NFL player is this?</h2>
+        <img src="images/dan-marino1984.webp" alt="Dan Marino" id="image">
+        <div class="answer-list">
+            <form>
+                <ul id="list">
+                    <li id="option1"><input type="radio" id="opt1" name="question-options" value="Dan Marino">
+                    <label for="opt1">Dan Marino</label><br></li>
+                    <li id="option2"><input type="radio" id="opt2" name="question-options" value="Ricky Williams">
+                    <label for="opt2">Ricky Williams</label><br></li>
+                    <li id="option3"><input type="radio" id="opt3" name="question-options" value="Tom Brady">
+                    <label for="opt3">Tom Brady</label><br></li>
+                    <li id="option4"><input type="radio" id="opt4" name="question-options" value="Joe Montana">
+                    <label for="opt4">Joe Montana</label><br></li>
+                </ul>
+            </form>
+        </div>
+        <div class="action-btns">
+            <input id="back-btn" type="button" value="Back">
+            <input id="next-btn" type="button" value="Next Question">
+        </div>
+    </div>
+    <script src="scripts/jquery.js"></script>
+</body>
+</html>
